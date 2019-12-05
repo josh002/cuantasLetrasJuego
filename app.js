@@ -16,7 +16,7 @@ const doce = document.getElementById('doce');
 
 
 //palabras para usar
-const palabrasArray =['COMIDA', 'ESTUDIO', 'CABECERA', 'PIGMENTACION'];
+const palabrasArray =['comida', 'estudio', 'cabecera', 'celular', 'dinosaurio', 'herramienta','pectoral','premiación','semántica','algoritmo'];
 
 function elegirPalabra(pos){
     return palabrasArray[pos];
@@ -25,38 +25,44 @@ function respuesta(valor){
     mirespuesta = valor;
 }
 function mostrarPalabra(mipalabra){
-   palabra.innerHTML= mipalabra;
+    let mayus = mipalabra.toUpperCase();
+   palabra.innerHTML= mayus;
 
 }
 
-function game(letras){
-   if(letras == palabrasArray[1].length){
+function game(letras,cantidad){
+   if(letras === cantidad){
+       
        score.innerHTML = 'acertaste';
        main();
+       
    }
    else {
-       main()
+    score.innerHTML = 'fallaste';
+   
    }
    
 }
 function voz(texto){
-    speechSynthesis.speak(new SpeechSynthesisUtterance(texto))}
+    speechSynthesis.speak(new SpeechSynthesisUtterance(texto))
+}
+
 function main(){
-    let x = elegirPalabra(2);
+    let x = elegirPalabra(Math.floor(Math.random()*10));
+    cantidad = x.length;
     voz(x);
-    mostrarPalabra(x);
-    
+    mostrarPalabra(x);    
     setTimeout(function borrarPalabra(){palabra.innerHTML= 'XXXXXX'}, 1500);
-    tres.addEventListener('click', function () {game(3)});
-    cuatro.addEventListener('click', function () {game(4)});
-    cinco.addEventListener('click', function () {game(5)});
-    seis.addEventListener('click', function () {game(6)});
-    siete.addEventListener('click', function () {game(7)});
-    ocho.addEventListener('click', function () {game(8)});
-    nueve.addEventListener('click', function () {game(9)});
-    diez.addEventListener('click', function () {game(10)});
-    once.addEventListener('click', function () {game(11)});
-    doce.addEventListener('click', function () {game(12)});   
+    tres.addEventListener('click', function ()   {game(3, cantidad)});
+    cuatro.addEventListener('click', function () {game(4, cantidad)});
+    cinco.addEventListener('click', function ()  {game(5, cantidad)});
+    seis.addEventListener('click', function ()   {game(6, cantidad)});
+    siete.addEventListener('click', function ()  {game(7, cantidad)});
+    ocho.addEventListener('click', function ()   {game(8, cantidad)});
+    nueve.addEventListener('click', function ()  {game(9, cantidad)});
+    diez.addEventListener('click', function ()   {game(10, cantidad)});
+    once.addEventListener('click', function ()   {game(11, cantidad)});
+    doce.addEventListener('click', function ()   {game(12, cantidad)});    
 }
 function jugar(){
     main();    
