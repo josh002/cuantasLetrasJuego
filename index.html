@@ -5,39 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oldenburg&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
 <body>
-    <div id="top">
-        <h1>CUANTAS LETRAS TIENE LA PALABRA...</h1>
-    </div>
-
-    <div id="main">
-        <p id="instrucciones">La palabra aparecerá <br> solo 1.5 segundos</p>
-        <div id="button-container">
-            <button id="tres">3</button>
-            <button id="cuatro" class=" dos">4</button>
-            <button id="cinco" class=" tres">5</button>
-            <button id="seis" class=" cuatro">6</button>
-            <button id="siete" class=" cinco">7</button>
-            <button id="ocho" class=" cinco">8</button>
-            <button id="nueve" class=" cuatro">9</button>
-            <button id="diez" class=" tres">10</button>
-            <button id="once" class=" dos">11</button>
-            <button id="doce">12</button>
+    <div class="container rounded" id="medio">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-8">
+                <h1>CUANTAS LETRAS TIENE...</h1>
+            </div>
+            <div id="play" class="col-3"><i class="btn far fa-play-circle"> JUGAR</i></div>            
         </div>
-        <p id="palabra">__ __ __ __ __</p>
-        <p id="empezar" onclick="jugar()">JUGAR</p>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+                <p class="resultado"><i class="fas fa-angle-double-right"></i> 0 <i class="fas fa-angle-double-left"></i></p>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <i class="fas fa-info-circle"></i> Tienes 2 segundos para saber cuantas letras tiene una palabra
+            </div>
+            <div class="col-4">
+                <div class="row ">
+                    <div class="col-2">
+                        <div class="row btn btn-block ">1</div>
+                        <div class="row btn  btn-block">12</div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row btn  btn-block">2</div>
+                        <div class="row btn  btn-block">11</div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row btn btn-block">3</div>
+                        <div class="row btn btn-block">10</div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row btn  btn-block">4</div>
+                        <div class="row btn  btn-block">9</div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row btn  btn-block">5</div>
+                        <div class="row btn  btn-block">8</div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row btn  btn-block">6</div>
+                        <div class="row btn  btn-block">7</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <p class="text-center palabra">__ __ __ __</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-4"></div>
+            <div class="col-4 score">SCORE:<span id="resultado">0</span></div>
+            <div></div>
+        </div>
     </div>
-    <div id="score">
-        
-        <p>SCORE:</p>
-        <p id="acertadas">0</p>
-    </div>
-    <script src="app.js"></script>
 </body>
 
 </html>

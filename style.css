@@ -1,0 +1,48 @@
+*{
+    color: white;
+    font-family: 'Oldenburg', cursive;
+    
+}
+body{
+    background-color:rgb(190, 49, 68);
+}
+.container{
+   margin-top: 20vh;   
+   background-color: rgb(39, 39, 42);
+   border: black solid 5px;
+}
+
+.palabra{
+    font-size:200%;
+    text-align: center;
+    border-radius: 3px;
+    
+}
+.resultado{
+    font-size: 400%;    
+   
+}
+.btn{
+    font-weight: bolder;
+    color:white;
+    background-color:rgb(190, 49, 68);
+}
+h1{
+    padding: 50px;
+    color: rgb(190, 49, 68);
+}
+.score{
+    font-size:xx-large;
+    border: 3px solid white;
+    margin:30px 0px;
+    border-radius:5px;
+}
+#play{
+    padding: 50px;
+}
+
+@media (min-width:1000px){
+    .score{
+        font-size: 400%;
+    }
+}
