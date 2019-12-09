@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,68 +9,75 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Oldenburg&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Document</title>
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">        
+    <title>Cuantas letras</title>
 </head>
 
 <body>
     <div class="container rounded" id="medio">
+        <!--TOP Titulo y boton de jugar-->
         <div class="row">
             <div class="col-1"></div>
             <div class="col-8">
                 <h1>CUANTAS LETRAS TIENE...</h1>
             </div>
-            <div id="play" class="col-3"><i class="btn far fa-play-circle"> JUGAR</i></div>            
+            <div id="play" class="col-3"><i id="inicio" class="btn far fa-play-circle"> JUGAR</i></div>            
         </div>
+        <!--Resultado de la palabra-->
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4 text-center">
                 <p class="resultado"><i class="fas fa-angle-double-right"></i> 0 <i class="fas fa-angle-double-left"></i></p>
-            </div>
-            
+            </div>            
         </div>
+        <!--MEDIUM Parte del medio-->
         <div class="row">
-            <div class="col-4">
-                <i class="fas fa-info-circle"></i> Tienes 2 segundos para saber cuantas letras tiene una palabra
+            <!--Intrucciones del juego-->
+            <div class="col-3">
+                <i class="fas fa-info-circle"></i> Tienes 2 segundos para saber cuantas letras tiene la palabra mostrada,tambien lo podes escuchar.
             </div>
-            <div class="col-4">
+            <!--Botones del juego-->
+            <div class="col-6">
                 <div class="row ">
                     <div class="col-2">
-                        <div class="row btn btn-block ">1</div>
-                        <div class="row btn  btn-block">12</div>
+                        <div id="tres"  class="row btn btn-block ">3</div>
+                        <div id="nueve" class="row btn  btn-block ">9</div>
                     </div>
                     <div class="col-2">
-                        <div class="row btn  btn-block">2</div>
-                        <div class="row btn  btn-block">11</div>
+                        <div id="cuatro" class="row btn  btn-block">4</div>
+                        <div id="diez" class="row btn  btn-block">10</div>
                     </div>
                     <div class="col-2">
-                        <div class="row btn btn-block">3</div>
-                        <div class="row btn btn-block">10</div>
+                        <div id="cinco" class="row btn btn-block">5</div>
+                        <div id="once" class="row btn btn-block">11</div>
                     </div>
                     <div class="col-2">
-                        <div class="row btn  btn-block">4</div>
-                        <div class="row btn  btn-block">9</div>
+                        <div id="seis" class="row btn  btn-block">6</div>
+                        <div id="doce" class="row btn  btn-block">12</div>
                     </div>
                     <div class="col-2">
-                        <div class="row btn  btn-block">5</div>
-                        <div class="row btn  btn-block">8</div>
+                        <div id="siete" class="row btn  btn-block">7</div>
+                        <div id="trece" class="row btn  btn-block">13</div>
                     </div>
                     <div class="col-2">
-                        <div class="row btn  btn-block">6</div>
-                        <div class="row btn  btn-block">7</div>
+                        <div id="ocho" class="row btn  btn-block">8</div>
+                        <div id="catorce" class="row btn  btn-block">14</div>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <p class="text-center palabra">__ __ __ __</p>
+            <!--Palabra que se muestra-->
+            <div class="col-3">
+                <p id="palabra" class="text-center palabra">__ __ __ __</p>
             </div>
         </div>
+        <!--BOTTOM Parte de abajo que contiene el score-->
         <div class="row text-center">
             <div class="col-4"></div>
             <div class="col-4 score">SCORE:<span id="resultado">0</span></div>
             <div></div>
         </div>
-    </div>
+        
+    </div>   
+    <script src="./app.js"></script>
 </body>
-
 </html>
