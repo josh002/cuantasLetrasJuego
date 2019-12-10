@@ -22,6 +22,10 @@ body{
     font-size: 400%;    
    
 }
+.respuesta{
+
+    font-size: 200%;
+}
 .btn{
     font-weight: bolder;
     color:white;
