@@ -3,6 +3,8 @@ const reinicio = document.getElementById('reinicio');
 const resultado = document.getElementById('respuesta');
 //estado de tiempo limite
 var estado = false;
+//palabra a decir
+var utterance  = new SpeechSynthesisUtterance();
 //botones
 const tres = document.getElementById('tres');
 const cuatro = document.getElementById('cuatro');
@@ -43,6 +45,8 @@ function reiniciarJuego() {
 function palabraRandom() {
     let numeroRandom = Math.floor(Math.random() * 10);
     miPalabra = arrayPalabras[numeroRandom];
+    utterance.text = miPalabra;
+    speechSynthesis.speak(utterance);
     cambiarPalabra();
     cambiaResultado();
 }
@@ -89,18 +93,20 @@ function tiempo(){
 function ganar() {
     user_score++;
     score.innerHTML = user_score;
+    miPalabra = '';
 }
 
 //perder
 function perder() {
     user_score--;
     score.innerHTML = user_score;
+    miPalabra = '';
 }
 
 //funcion principal
 function main() {
     siguiente.addEventListener('click', function () {
-        palabraRandom();
+        palabraRandom();        
         setTimeout(function () {
             if(estado){
 
