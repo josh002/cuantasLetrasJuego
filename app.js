@@ -30,7 +30,7 @@ const score = document.getElementById('resultado');
 let user_score = 0;
 
 //Arrray palabras
-const arrayPalabras = ['celebra', 'camion', 'cancion', 'helado', 'cantemos', 'cancion', 'parlante', 'computadora', 'teclado', 'celular'];
+const arrayPalabras = ['celebra', 'camion', 'cancion', 'helado', 'cantemos', 'cancion', 'parlante', 'computadora', 'teclado', 'celular', 'perro', 'montaña', 'celebración', 'heladera', 'castellano', 'pensamiento', 'estimulante', 'desconocido', 'vocabulario', 'ejemplo', 'diccionario', 'considerada', 'sentimientos', 'insoportable', 'poema', 'compasión', 'perdon' , 'incandescencia', 'nostalgia', 'descenlace', 'navidad', 'cultura', 'videos', 'tarde', 'Argentina', 'minuto', 'monto', 'ser', 'lechuga' , 'tomate'];
 
 //palabra seleccionada
 let miPalabra = '';
@@ -46,7 +46,7 @@ function reiniciarJuego() {
 
 //elegir palabra random
 function palabraRandom() {
-    let numeroRandom = Math.floor(Math.random() * 10);
+    let numeroRandom = Math.floor(Math.random() * 40);
     miPalabra = arrayPalabras[numeroRandom];
     utterance.text = miPalabra;
     speechSynthesis.speak(utterance);
