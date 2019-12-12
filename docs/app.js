@@ -30,7 +30,7 @@ const score = document.getElementById('resultado');
 let user_score = 0;
 
 //Arrray palabras
-const arrayPalabras = ['celebra', 'camion', 'cancion', 'helado', 'cantemos', 'cancion', 'parlante', 'computadora', 'teclado', 'celular', 'perro', 'montaña', 'celebración', 'heladera', 'castellano', 'pensamiento', 'estimulante', 'desconocido', 'vocabulario', 'ejemplo', 'diccionario', 'considerada', 'sentimientos', 'insoportable', 'poema', 'compasión', 'perdon' , 'incandescencia', 'nostalgia', 'descenlace', 'navidad', 'cultura', 'videos', 'tarde', 'Argentina', 'minuto', 'monto', 'ser', 'lechuga' , 'tomate'];
+const arrayPalabras = ['celebra', 'camion', 'cancion', 'helado', 'cantemos', 'canción', 'parlante', 'computadora', 'teclado', 'celular', 'perro', 'montaña', 'celebración', 'heladera', 'castellano', 'pensamiento', 'estimulante', 'desconocido', 'vocabulario', 'ejemplo', 'diccionario', 'considerada', 'sentimientos', 'insoportable', 'poema', 'compasión', 'perdón' , 'incandescencia', 'nostalgia', 'descenlace', 'navidad', 'cultura', 'videos', 'tarde', 'Argentina', 'minuto', 'monto', 'ser', 'lechuga' , 'tomate'];
 
 //palabra seleccionada
 let miPalabra = '';
