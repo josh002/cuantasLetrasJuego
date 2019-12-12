@@ -109,6 +109,7 @@ function perder() {
 //funcion principal
 function main() {
     siguiente.addEventListener('click', function () {
+        clearTimeout(paraTimeout);
         siguiente.innerHTML = 'Siguiente Palabra';
         palabraRandom();        
        paraTimeout = setTimeout(function () {
