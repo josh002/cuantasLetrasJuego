@@ -3,6 +3,8 @@ const reinicio = document.getElementById('reinicio');
 const resultado = document.getElementById('respuesta');
 //estado de tiempo limite
 var estado = false;
+//clear time , fix de bug 
+var paraTimeout;
 //palabra a decir
 var utterance  = new SpeechSynthesisUtterance();
 //botones
@@ -107,7 +109,7 @@ function perder() {
 function main() {
     siguiente.addEventListener('click', function () {
         palabraRandom();        
-        setTimeout(function () {
+       paraTimeout = setTimeout(function () {
             if(estado){
 
             } else if (estado === false){
@@ -118,18 +120,18 @@ function main() {
             },3000);
             estado = false;
     });
-    tres.addEventListener('click', function () { correcto(3) });
-    cuatro.addEventListener('click', function () { correcto(4) });
-    cinco.addEventListener('click', function () { correcto(5) });
-    seis.addEventListener('click', function () { correcto(6) });
-    siete.addEventListener('click', function () { correcto(7) });
-    ocho.addEventListener('click', function () { correcto(8) });
-    nueve.addEventListener('click', function () { correcto(9) });
-    diez.addEventListener('click', function () { correcto(10) });
-    once.addEventListener('click', function () { correcto(11) });
-    doce.addEventListener('click', function () { correcto(12) });
-    trece.addEventListener('click', function () { correcto(13) });
-    catorce.addEventListener('click', function () { correcto(14) });
-    reinicio.addEventListener('click', function () { reiniciarJuego() });
+    tres.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(3) });
+    cuatro.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(4) });
+    cinco.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(5) });
+    seis.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(6) });
+    siete.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(7) });
+    ocho.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(8) });
+    nueve.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(9) });
+    diez.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(10) });
+    once.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(11) });
+    doce.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(12) });
+    trece.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(13) });
+    catorce.addEventListener('click', function () {clearTimeout(paraTimeout); correcto(14) });
+    reinicio.addEventListener('click', function () {clearTimeout(paraTimeout); reiniciarJuego() });
 }
 main();

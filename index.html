@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Oldenburg&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">        
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">        
     <title>Cuantas letras</title>
 </head>
 
@@ -17,65 +18,65 @@
     <div class="container rounded" id="medio">
         <!--TOP Titulo y boton de jugar-->
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-8">
+            <div class="col-sm-1 col-md-1"></div>
+            <div class="col-sm-8 col-md-8">
                 <h1>CUANTAS LETRAS TIENE...</h1>
             </div>
-            <div id="play" class="col-3"><i id="reinicio" class="btn far fa-play-circle"> Reiniciar</i></div>            
+            <div id="play" class="col-sm-3 col-md-3"><i id="reinicio" class="btn far fa-play-circle"> Reiniciar</i></div>            
         </div>
         <!--Resultado de la palabra-->
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-2 respuesta">Respuesta: </div>
-            <div class="col-6 text-center">
+            <div class="col-sm-1 col-md-1"></div>
+            <div class="col-sm-2 col-md-2 respuesta">Respuesta: </div>
+            <div class="col-sm-6 col-md-6 text-center">
                 <p  class="resultado"><i class="fas fa-angle-double-right"></i> <span id="respuesta">--</span> <i class="fas fa-angle-double-left"></i></p>
             </div>            
         </div>
         <!--MEDIUM Parte del medio-->
         <div class="row">
             <!--Intrucciones del juego-->
-            <div class="col-3">
+            <div class="col-sm-3 col-md-3 informacion">
                 <i class="fas fa-info-circle"></i> Tienes 3 segundos para saber cuantas letras tiene la palabra mostrada,tambien lo podes escuchar.
             </div>
             <!--Botones del juego-->
-            <div class="col-6">
+            <div class="col-sm-9 col-md-6">
                 <div class="row ">
-                    <div class="col-2">
+                    <div class="col-sm-2 col-md-2">
                         <div id="tres"  class="row btn btn-block ">3</div>
                         <div id="nueve" class="row btn  btn-block ">9</div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-sm-2 col-md-2">
                         <div id="cuatro" class="row btn  btn-block">4</div>
                         <div id="diez" class="row btn  btn-block">10</div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-sm-2 col-md-2">
                         <div id="cinco" class="row btn btn-block">5</div>
                         <div id="once" class="row btn btn-block">11</div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-sm-2 col-md-2">
                         <div id="seis" class="row btn  btn-block">6</div>
                         <div id="doce" class="row btn  btn-block">12</div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-sm-2 col-md-2">
                         <div id="siete" class="row btn  btn-block">7</div>
                         <div id="trece" class="row btn  btn-block">13</div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-sm-2 col-md-2">
                         <div id="ocho" class="row btn  btn-block">8</div>
                         <div id="catorce" class="row btn  btn-block">14</div>
                     </div>
                 </div>
             </div>
             <!--Palabra que se muestra-->
-            <div class="col-3">
+            <div class="col-sm-12 col-md-3">
                 <p id="palabra" class="text-center palabra">__ __ __ __</p>
             </div>
         </div>
         <!--BOTTOM Parte de abajo que contiene el score-->
         <div class="row text-center">
-            <div class="col-4"></div>
-            <div class="col-4 score">SCORE:<span id="resultado">0</span></div>
-            <div class="col-4"> <button id="siguientePalabra" class="btn btn-danger">siguiente palabra</button></div>
+            <div class="col-sm-4 col-md-4"></div>
+            <div class="col-sm-4 col-md-4 score">SCORE:<span id="resultado">0</span></div>
+            <div class="col-sm-4 col-md-4"> <button id="siguientePalabra" class="btn btn-danger">siguiente palabra</button></div>
         </div>
         
     </div>   

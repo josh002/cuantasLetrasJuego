@@ -1,52 +1,87 @@
-*{
+* {
     color: white;
     font-family: 'Oldenburg', cursive;
-    
-}
-body{
-    background-color:rgb(190, 49, 68);
-}
-.container{
-   margin-top: 10vh;   
-   background-color: rgb(39, 39, 42);
-   border: black solid 5px;
 }
 
-.palabra{
-    font-size:200%;
+body {
+    background-color: rgb(190, 49, 68);
+}
+
+.container {
+    margin-top: 10vh;
+    background-color: rgb(39, 39, 42);
+    border: black solid 5px;
+}
+
+.palabra {
+    font-size: 200%;
     text-align: center;
     border-radius: 3px;
-    
 }
-.resultado{
-    font-size: 400%;    
-   
-}
-.respuesta{
 
+.resultado {
+    font-size: 400%;
+}
+
+.respuesta {
     font-size: 200%;
 }
-.btn{
+
+.btn {
     font-weight: bolder;
-    color:white;
-    background-color:rgb(190, 49, 68);
+    color: white;
+    background-color: rgb(190, 49, 68);
 }
-h1{
+
+h1 {
     padding: 50px;
     color: rgb(190, 49, 68);
 }
-.score{
-    font-size:xx-large;
+
+.score {
+    font-size: xx-large;
     border: 3px solid white;
-    margin:30px 0px;
-    border-radius:5px;
+    margin: 30px 0px;
+    border-radius: 5px;
 }
-#play{
+
+#play {
     padding: 50px;
 }
 
-@media (min-width:1000px){
-    .score{
+@media (min-width:1000px) {
+    .score {
         font-size: 400%;
+    }
+}
+
+@media (max-width:640px) {
+    .container{
+        margin-top: auto;
+    }
+    h1 {
+        font-size: 21px;
+        padding: 5px;
+    }
+    #play{
+        padding:5px;
+    }
+    .respuesta{
+        font-size:20px;
+    }
+    .resultado {
+        font-size:20px;
+    }
+    .informacion{
+        font-size: 10px;
+    }
+    .score{
+        font-size:100%;
+        margin-top:auto;
+        margin-bottom:5px;
+        padding: 4px 15px;
+    }
+    #siguientePalabra{
+        font-size:12px;
     }
 }
