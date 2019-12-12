@@ -40,6 +40,7 @@ function reiniciarJuego() {
     user_score = 0;
     score.innerHTML = user_score;
     miPalabra = '';
+    siguiente.innerHTML = 'Iniciar Juego';
     cambiaResultado();
 }
 
@@ -108,6 +109,7 @@ function perder() {
 //funcion principal
 function main() {
     siguiente.addEventListener('click', function () {
+        siguiente.innerHTML = 'Siguiente Palabra';
         palabraRandom();        
        paraTimeout = setTimeout(function () {
             if(estado){

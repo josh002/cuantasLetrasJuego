@@ -54,10 +54,11 @@ h1 {
         font-size: 400%;
     }
 }
-
-@media (max-width:640px) {
+/*responsive para celulares*/
+@media (max-width:720px) {
     .container{
         margin-top: auto;
+        padding: 10px;
     }
     h1 {
         font-size: 21px;
@@ -83,5 +84,11 @@ h1 {
     }
     #siguientePalabra{
         font-size:12px;
+    }
+}
+/* mensaje para girar celular*/
+@media (max-width:575px){
+    .container{
+        opacity: 0;
     }
 }
