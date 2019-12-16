@@ -30,7 +30,7 @@ const score = document.getElementById('resultado');
 let user_score = 0;
 
 //Arrray palabras
-const arrayPalabras = ['celebra', 'camion', 'cancion', 'helado', 'cantemos', 'canción', 'parlante', 'computadora', 'teclado', 'celular', 'perro', 'montaña', 'celebración', 'heladera', 'castellano', 'pensamiento', 'estimulante', 'desconocido', 'vocabulario', 'ejemplo', 'diccionario', 'considerada', 'sentimientos', 'insoportable', 'poema', 'compasión', 'perdón' , 'incandescencia', 'nostalgia', 'descenlace', 'navidad', 'cultura', 'videos', 'tarde', 'Argentina', 'minuto', 'monto', 'ser', 'lechuga' , 'tomate'];
+const arrayPalabras = ['celebra', 'camion', 'cancion', 'helado', 'cantemos', 'canción', 'parlante', 'computadora', 'teclado', 'celular', 'perro', 'montaña', 'celebración', 'heladera', 'castellano', 'pensamiento', 'estimulante', 'desconocido', 'vocabulario', 'ejemplo', 'diccionario', 'considerada', 'sentimientos', 'insoportable', 'poema', 'compasión', 'perdón' , 'incandescencia', 'nostalgia', 'descenlace', 'navidad', 'cultura', 'videos', 'tarde', 'Argentina', 'minuto', 'monto', 'ser', 'lechuga' , 'tomate', 'fracasad', 'fracasan', 'fracasar', 'fracasas', 'fracasen', 'fracases', 'fracasos', 'fracatan', 'fraccion','fractura', 'fracture', 'fracturo', 'jabalies', 'jabalina', 'jubilado', 'jubilais', 'jubilara', 'jubilare', 'jubilase', 'laborares', 'icnologia', 'iconomaco', 'icosaedro', 'habaneras', 'habaneros', 'habientes', 'habilidad', 'habilitad', 'habilitan', 'habilitar', 'laberintos', 'obedecemos', 'obedeceran', 'obedeceras', 'quebrajoso', 'quebrantad', 'quebrantan', 'quebrantar', 'quebrantas','eclosionado', 'eclosionais', 'eclosionara', 'ecograficas', 'ecograficos', 'ecolocacion', 'idealidades', 'idealizaban', 'idealizabas', 'idealizadas', 'idealizador', 'obedecieren', 'obedecieres', 'obedecieron', 'obedeciesen', 'nacionalizar', 'nacionalizas', 'nacionalidad', 'nacionalismo', 'nacionalista', 'quebrandosas', 'quebrandosos', 'quebrantaban', 'quebrantabas', 'quebrantable', 'vacunariamos', 'vagabundeaba', 'vagabundeado', 'vagabundeais', 'caballereaban', 'facilitabamos', 'facilitadoras', 'facilitadores', 'facilitaramos', 'facilitaremos', 'galactometros', 'galanteabamos', 'galanteadores', 'lactescencias', 'ladillariamos', 'umbralariamos', 'unifamiliares', 'unificaciones', 'unificariamos', 'uniformabamos', 'aballestaremos', 'aballestariais', 'aballestasemos', 'bacteriologica', 'bacteriologico', 'caballerosidad', 'cabeceamientos', 'eclosionaremos', 'eclosionariais', 'eclosionasemos', 'identificarias', 'identificaseis', 'identificativa', 'identificativo', 'nacionalizadas', 'nacionalizados', 'nacionalizamos', 'obedecimientos', 'obedientemente', 'objetivaciones'];
 
 //palabra seleccionada
 let miPalabra = '';
@@ -46,7 +46,7 @@ function reiniciarJuego() {
 
 //elegir palabra random
 function palabraRandom() {
-    let numeroRandom = Math.floor(Math.random() * 40);
+    let numeroRandom = Math.floor(Math.random() * 144);
     miPalabra = arrayPalabras[numeroRandom];
     utterance.text = miPalabra;
     speechSynthesis.speak(utterance);
